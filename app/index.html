@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>Board</title>
+    <link rel="stylesheet" href="../css/app.css" />
+    <link rel="stylesheet" href="../css/bootstrap.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.min.js" type="text/javascript"></script>
+    <script src="../js/controllers.js" type="text/javascript"></script>
+</head>
+<body ng-controller="ListCtrl">
+    <div class="board">
+        <div ng-repeat="list in lists" class="list">
+            <h2 class="list-title">{{ list.title }} ({{ list.count }})</h2>
+            <div ng-repeat="card in list.cards" class="card">
+                <strong>{{ card.title }}</strong>
+                <p>{{ card.description }}</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
